@@ -1,0 +1,73 @@
+<div
+  class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-rose-300 via-pink-200 to-yellow-100 p-4">
+
+  <!-- Balão de confirmação -->
+  <div *ngIf="mostrarBalao" [ngClass]="{ 'animate-fade-slide-in': mostrarBalao }"
+    class="text-body relative bg-yellow-100 text-black px-4 py-4 rounded-xl shadow-md mb-6 mt-4 max-w-xs mx-auto text-left">
+
+    <!-- Ícone de fechar -->
+    <button (click)="mostrarOcultarBalao()"
+      class="absolute top-2 right-2 text-gray-500 hover:text-red-700 text-xl font-bold">
+      ✖
+    </button>
+
+    <!-- Conteúdo do balão -->
+    <br> 📅 15/08 - Sexta Feira <br>
+    🕗 20:00hrs <br>
+    📍 Onde você quiser 😏 <br>
+
+    <div class="flex justify-center mt-3">
+      <!-- Confirmar -->
+      <button (click)="aceitarConvite()"
+        class="text-body inline-block bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold py-2 px-6 rounded-full shadow-md transition-all duration-200">
+        💬 Me fala ai onde vai ser
+      </button>
+    </div>
+  </div>
+
+  <!-- Moldura central branca -->
+  <div class="border-4 border-rose-400 relative bg-gray-100 rounded-3xl shadow-2xl p-6 max-w-md w-full text-center">
+
+    <!-- Texto digitando -->
+    <p class="text-body text-3xl text-pink-800 font-medium italic mb-4 max-w-md mx-auto drop-shadow">
+      {{ textoDigitando }}
+    </p>
+
+    <!-- Imagem do gato -->
+    <div class="relative w-full flex justify-center mb-4">
+      <!-- Overlay escuro -->
+      <div class="animate-float max-w-[200px] w-full absolute inset-0 bg-black bg-opacity-25 rounded-xl z-10 mx-auto"></div>
+
+      <!-- Imagem do gato -->
+      <img src="https://i.ibb.co/VWXnHJWZ/download-7.jpg" alt="Gato paquerador"
+        class="animate-float rounded-xl max-w-[200px] w-full h-auto object-cover shadow-md mx-auto z-0" />
+
+      <!-- Marca de beijo sobre a imagem -->
+      <img *ngIf="mostrarBeijo"
+        src="https://i.ibb.co/7t6tnbD3/vecteezy-lipstick-kiss-print-on-transparent-background-18723323.png"
+        class="absolute bottom-5 w-14 animate-beijo z-20" alt="Beijo" />
+    </div>
+
+
+    <!-- Botões principais -->
+    <div class="relative flex gap-6 w-full h-24 items-center justify-center mb-4">
+      <!-- Botão NÃO (fujão) -->
+      <button [ngStyle]="{
+          top: naoTop + 'px',
+          left: naoLeft + 'px',
+          position: isBotaoFugindo ? 'absolute' : 'static'
+        }" (mouseenter)="ativarFuga()" (touchstart)="ativarFuga()" (click)="moverBotao()"
+        class="w-16 h-16 flex items-center justify-center bg-white text-red-500 hover:text-white text-3xl rounded-full shadow-lg transition">
+        ❌
+      </button>
+
+      <!-- Botão SIM -->
+      <button (click)="mostrarOcultarBalao()"
+        class="animate-heartbeat w-16 h-16 flex items-center justify-center bg-white hover:bg-green-500 text-green-500 hover:text-white text-3xl rounded-full shadow-lg transition">
+        💚
+      </button>
+
+    </div>
+
+  </div>
+</div>
