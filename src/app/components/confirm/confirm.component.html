@@ -1,11 +1,12 @@
-<!-- Alerta negativo no topo -->
+<!-- Alerta amarelo no topo -->
 <div *ngIf="mostrarAlertaNegativo"
-  class="text-body text-center fixed top-4 left-1/2 transform -translate-x-1/2 bg-red-100 border border-red-400 text-red-700 px-6 py-3 rounded-lg shadow-lg max-w-sm w-full z-50 flex items-center justify-between mb-6">
+  class="text-body text-center fixed top-4 left-1/2 transform -translate-x-1/2 bg-yellow-200 border border-yellow-400 text-black-500 px-6 py-3 rounded-lg shadow-lg max-w-sm w-full z-50 flex items-center justify-between mb-6">
   <span> Essa proposta não é pra você, saia da página imediatamente!!</span>
-  <button (click)="fecharAlertaNegativo()" class="text-red-700 font-bold ml-4 hover:text-red-900 transition">
+  <button (click)="fecharAlertaNegativo()" class="text-yellow-900 font-bold ml-4 hover:text-pink-500 transition">
     ✖
   </button>
 </div>
+
 
 <div
   class="relative z-10 flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-pink-100 via-rose-200 to-pink-300 p-4">
