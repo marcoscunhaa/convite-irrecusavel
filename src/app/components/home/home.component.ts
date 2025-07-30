@@ -1,15 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LoadingComponent } from "../loading/loading.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LoadingComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-
+  mostrarLoading = true;
   textoCompleto: string = "Só você e eu, no seu restaurante favorito, tomando aquele gin, beijando devagarinho e ver quem resiste mais. Bora? 😈🔥";
   textoDigitando: string = "";
   index: number = 0;
@@ -18,7 +19,10 @@ export class HomeComponent implements OnInit {
   isBotaoFugindo = false;
 
   ngOnInit(): void {
-    this.digitarTexto();
+    this.digitarTexto(),
+      setTimeout(() => {
+        this.mostrarLoading = false;
+      }, 1500);
   }
 
   digitarTexto() {
@@ -33,15 +37,15 @@ export class HomeComponent implements OnInit {
   mostrarBeijo = false;
 
   mostrarOcultarBalao() {
-  if (this.mostrarBeijo == false) {
-    setTimeout(() => {
-      this.mostrarBalao = true;
-    }, 2000);
-  } else {
-    this.mostrarBalao = !this.mostrarBalao;
+    if (this.mostrarBeijo == false) {
+      setTimeout(() => {
+        this.mostrarBalao = true;
+      }, 2000);
+    } else {
+      this.mostrarBalao = !this.mostrarBalao;
+    }
+    this.mostrarBeijo = !this.mostrarBeijo;
   }
-  this.mostrarBeijo = !this.mostrarBeijo;
-}
 
   mostrarAlerta = false;
 
@@ -62,14 +66,14 @@ export class HomeComponent implements OnInit {
     this.moverBotao();
   }
 
- moverBotao() {
-  const maxTop = 100;     // até 100px pra baixo
-  const minLeft = -80;    // até 80px pra esquerda
-  const maxLeft = 80;     // até 80px pra direita
+  moverBotao() {
+    const maxTop = 100;     // até 100px pra baixo
+    const minLeft = -80;    // até 80px pra esquerda
+    const maxLeft = 80;     // até 80px pra direita
 
-  this.naoTop = Math.floor(Math.random() * maxTop); // entre 0 e 100px
-  this.naoLeft = Math.floor(Math.random() * (maxLeft - minLeft + 1)) + minLeft; // entre -80 e 80px
-}
+    this.naoTop = Math.floor(Math.random() * maxTop); // entre 0 e 100px
+    this.naoLeft = Math.floor(Math.random() * (maxLeft - minLeft + 1)) + minLeft; // entre -80 e 80px
+  }
 
 
 
