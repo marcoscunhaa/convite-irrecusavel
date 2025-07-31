@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     this.digitarTexto(),
       setTimeout(() => {
         this.mostrarLoading = false;
-      }, 1500);
+      }, 2000);
   }
 
   digitarTexto() {
