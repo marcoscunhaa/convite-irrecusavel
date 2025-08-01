@@ -11,7 +11,7 @@ import { LoadingComponent } from "../loading/loading.component";
 })
 export class HomeComponent implements OnInit {
   mostrarLoading = true;
-  textoCompleto: string = "Só você e eu, no seu restaurante favorito, tomando aquele gin, beijando devagarinho e ver quem resiste mais. Bora? 😈🔥";
+  textoCompleto: string = "Só você e eu, no seu restaurante favorito, tomando aquele drink de gin, beijar devagarinho e ver quem resiste mais. Bora?";
   textoDigitando: string = "";
   index: number = 0;
   naoTop = 0;
@@ -67,9 +67,9 @@ export class HomeComponent implements OnInit {
   }
 
   moverBotao() {
-    const maxTop = 100;     // até 100px pra baixo
-    const minLeft = -80;    // até 80px pra esquerda
-    const maxLeft = 80;     // até 80px pra direita
+    const maxTop = 100;   
+    const minLeft = -80;   
+    const maxLeft = 80;     
 
     this.naoTop = Math.floor(Math.random() * maxTop); // entre 0 e 100px
     this.naoLeft = Math.floor(Math.random() * (maxLeft - minLeft + 1)) + minLeft; // entre -80 e 80px
