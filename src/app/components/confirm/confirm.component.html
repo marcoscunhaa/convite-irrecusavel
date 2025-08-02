@@ -1,7 +1,7 @@
 <app-loading *ngIf="mostrarLoading" />
 <!-- Alerta amarelo no topo -->
 <div *ngIf="mostrarAlertaNegativo"
-  class="text-body text-center fixed top-4 left-1/2 transform -translate-x-1/2 bg-yellow-100 border border-yellow-100 text-gray-800 px-6 py-3 rounded-lg shadow-lg max-w-sm w-full z-50 flex items-center justify-between mb-6">
+  class="text-body text-center fixed top-4 left-1/2 transform -translate-x-1/2 bg-yellow-100 border border-yellow-100 text-red-700 px-6 py-3 rounded-lg shadow-lg max-w-sm w-full z-50 flex items-center justify-between mb-6">
   <span>😡 Então essa proposta não é pra você, saia da página imediatamente!!</span>
   <button (click)="fecharAlertaNegativo()" class="text-yellow-900 font-bold ml-4 hover:text-pink-500 transition">
     ✖
