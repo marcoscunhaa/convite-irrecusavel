@@ -11,7 +11,7 @@ import { LoadingComponent } from "../loading/loading.component";
 })
 export class HomeComponent implements OnInit {
   mostrarLoading = true;
-  textoCompleto: string = "Só você e eu, no seu restaurante favorito, tomando aquele gin, beijar devagarinho e ver quem resiste mais. Bora?😈🔥";
+  textoCompleto: string = "Só você e eu, tomando aquele gin, beijar devagarinho e ver quem resiste mais. Bora? 😈🔥";
   textoDigitando: string = "";
   index: number = 0;
   naoTop = 0;
