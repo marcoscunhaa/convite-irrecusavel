@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
 
   aceitarConvite() {
     const numero = '5588997475684';
-    const mensagem = encodeURIComponent('A gente vai pro Chinaider gato! 💞');
+    const mensagem = encodeURIComponent('A gente vai pro Chinaider gato!! 💞');
 
     const url = `https://wa.me/${numero}?text=${mensagem}`;
     window.open(url, '_blank');

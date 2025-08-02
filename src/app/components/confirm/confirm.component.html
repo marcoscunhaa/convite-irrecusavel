@@ -1,8 +1,8 @@
 <app-loading *ngIf="mostrarLoading" />
 <!-- Alerta amarelo no topo -->
 <div *ngIf="mostrarAlertaNegativo"
-  class="text-body text-center fixed top-4 left-1/2 transform -translate-x-1/2 bg-yellow-200 border border-yellow-400 text-black-500 px-6 py-3 rounded-lg shadow-lg max-w-sm w-full z-50 flex items-center justify-between mb-6">
-  <span>🚫 Essa proposta não é pra você, saia da página imediatamente!!</span>
+  class="text-body text-center fixed top-4 left-1/2 transform -translate-x-1/2 bg-yellow-100 border border-yellow-100 text-rose-700 px-6 py-3 rounded-lg shadow-lg max-w-sm w-full z-50 flex items-center justify-between mb-6">
+  <span>😡 Então essa proposta não é pra você, saia da página imediatamente!!</span>
   <button (click)="fecharAlertaNegativo()" class="text-yellow-900 font-bold ml-4 hover:text-pink-500 transition">
     ✖
   </button>
@@ -22,8 +22,11 @@
       <img src="https://i.picasion.com/pic92/32b02f3861e260172615bf898ca17149.gif" alt="Dya"
         class="rounded-xl mx-auto mb-4 shadow-md w-full h-auto z-10 relative" />
 
+      <!-- Camada preta semi-transparente por cima da imagem -->
+      <div class="absolute inset-0 bg-black bg-opacity-30 rounded-xl z-20"></div>
+
       <!-- Corações subindo sobre a imagem -->
-      <div class="pointer-events-none absolute inset-0 z-20">
+      <div class="pointer-events-none absolute inset-0 z-30">
         <div class="heart">😍</div>
         <div class="heart">💘</div>
         <div class="heart">🥰</div>
