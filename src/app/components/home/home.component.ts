@@ -11,7 +11,7 @@ import { LoadingComponent } from "../loading/loading.component";
 })
 export class HomeComponent implements OnInit {
   mostrarLoading = true;
-  textoCompleto: string = "Só você e eu, no seu restaurante favorito, tomando aquele drink de gin, beijar devagarinho e ver quem resiste mais. Bora?";
+  textoCompleto: string = "Só você e eu, no seu restaurante favorito, tomando aquele gin, beijar devagarinho e ver quem resiste mais. Bora?😈🔥";
   textoDigitando: string = "";
   index: number = 0;
   naoTop = 0;
@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
 
   aceitarConvite() {
     const numero = '5588997475684';
-    const mensagem = encodeURIComponent('A gente vai pro Chinaider gato 😈🔥');
+    const mensagem = encodeURIComponent('A gente vai pro Chinaider gato! 💞');
 
     const url = `https://wa.me/${numero}?text=${mensagem}`;
     window.open(url, '_blank');
@@ -71,8 +71,8 @@ export class HomeComponent implements OnInit {
     const minLeft = -80;   
     const maxLeft = 80;     
 
-    this.naoTop = Math.floor(Math.random() * maxTop); // entre 0 e 100px
-    this.naoLeft = Math.floor(Math.random() * (maxLeft - minLeft + 1)) + minLeft; // entre -80 e 80px
+    this.naoTop = Math.floor(Math.random() * maxTop);
+    this.naoLeft = Math.floor(Math.random() * (maxLeft - minLeft + 1)) + minLeft;
   }
 
 
