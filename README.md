@@ -46,4 +46,6 @@ ___
 
 ### 🎯 Aplicação em execução:
 
-![Gato fofo + convite](https://i.ibb.co/VWXnHJWZ/download-7.jpg)
+![loading-ag-117](assets/app.gif "application")
+
+
