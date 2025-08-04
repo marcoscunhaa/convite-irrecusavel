@@ -28,21 +28,31 @@ Este projeto foi desenvolvido em **Angular 17** com **Tailwind CSS** e **SC
 
 ## 🛠️ Como rodar localmente
 
-```bash
-# Clone o repositório
+### Clone o repositório
+
+```
 git clone https://github.com/marcoscunhaa/convite-irrecusavel.git
+```
 
-# Entre na pasta
+### Entre na pasta
+
+```
 cd convite-irrecusavel
+```
 
-# Instale as dependências
+### Instale as dependências
+
+```
 npm install
+```
 
-# Rode a aplicação
+### Rode a aplicação
+
+```
 ng serve
 ```
 
-___
+---
 
 ### 🎯 Aplicação em execução:
 
